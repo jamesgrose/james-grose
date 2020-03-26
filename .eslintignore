@@ -1,0 +1,8 @@
+# Compiled assets
+/.next
+
+# Deployment config
+/.now
+
+# JS files in the root folder - ie: config files
+/*.js
