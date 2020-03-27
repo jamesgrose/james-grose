@@ -1,0 +1,119 @@
+/* purgecss start ignore */
+
+.markdown-container-narrow {
+  @apply max-w-screen-sm mx-auto px-4;
+}
+
+.markdown > *:first-child {
+  @apply mt-0;
+}
+
+.markdown > * + * {
+  @apply mt-6;
+}
+
+.markdown > ul > * + *,
+.markdown > ol > * + * {
+  @apply mt-4;
+}
+
+.markdown > hr {
+  @apply border-t-0 border-r-0 border-l-0 border-b-2 border-gray-200 my-16;
+}
+
+.markdown > a, > p a, > ul li a, > ol li a {
+  @apply text-blue-500 underline font-medium;
+}
+
+.markdown strong {
+  @apply text-blue-500;
+}
+
+.markdown > p strong, > ul strong {
+  @apply font-semibold font-semibold;
+  @apply text-gray-800;
+}
+
+.markdown > h1,
+.markdown > h2,
+.markdown > h3,
+.markdown > h4 {
+  @apply font-serif font-semibold;
+  @apply text-black;
+  @apply markdown-container-narrow;
+}
+
+.markdown > h1 {
+  @apply mb-1;
+  @apply leading-none;
+  @apply text-4xl;
+}
+
+.markdown > h2 {
+  @apply mt-16 mb-4;
+  @apply leading-none;
+  @apply text-3xl;
+}
+
+.markdown > h2 + h3 {
+  @apply mt-6;
+}
+
+.markdown > h3 {
+  @apply mt-12 -mb-3;
+  @apply leading-tight;
+  @apply text-2xl;
+}
+
+.markdown > h4 {
+  @apply mt-12 mb-0;
+  @apply leading-snug;
+  @apply text-xl;
+}
+
+.markdown > h1 + p {
+  @apply mt-8;
+}
+
+.markdown > p {
+  @apply text-base;
+  @apply mt-6;
+}
+
+.markdown > ul,
+.markdown > ol {
+  @apply markdown-container-narrow;
+}
+
+.markdown > ul:not(.list-none) {
+  @apply list-none;
+}
+
+.markdown > ul:not(.list-none) li {
+  @apply relative pl-5;
+}
+
+.markdown > ul:not(.list-none) li::before {
+  @apply absolute left-0 text-gray-400 inline-block mr-3;
+  content: "\2022";
+}
+
+.markdown > ol {
+  @apply list-none;
+  counter-reset: item;
+}
+
+.markdown > ol > li {
+  @apply relative pl-10;
+}
+
+.markdown > ol > li::before {
+  @apply absolute top-0 left-0 mt-px;
+  @apply flex items-center justify-center;
+  @apply h-6 w-6 bg-gray-300 rounded-full;
+  @apply text-gray-700 text-xs font-bold;
+  content: counter(item);
+  counter-increment: item;
+}
+
+/* purgecss end ignore */

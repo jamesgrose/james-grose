@@ -1,7 +1,21 @@
+/**
+ * This injects Tailwind's base styles and any base styles registered by
+ * plugins.
+ */
 /* purgecss start ignore */
 @import 'tailwindcss/base';
 /* purgecss end ignore */
 
+@import "./components/markdown.css";
+
+/**
+ * This injects Tailwind's component classes and any component classes
+ * registered by plugins.
+ */
 @import "tailwindcss/components";
 
+/**
+ * This injects Tailwind's utility classes and any utility classes registered
+ * by plugins.
+ */
 @import "tailwindcss/utilities";
