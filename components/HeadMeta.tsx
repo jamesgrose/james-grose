@@ -3,7 +3,7 @@ import Head from "next/head";
 
 interface HeadMetaProps {
   path: string;
-  title: string;
+  title?: string;
   description?: string;
   image?: string;
   published?: string;
@@ -32,18 +32,20 @@ const HeadMeta = ({
   const url = fullURL(path);
   image = image ? fullURL(image) : "/preview.jpg";
 
+  title = title ? `${title} · ${site.title}` : site.title;
+
   const metaTags = [
-    { itemprop: "name", content: title || site.title },
-    { itemprop: "description", content: description || site.description },
-    { itemprop: "image", content: image },
+    { itemProp: "name", content: title },
+    { itemProp: "description", content: description || site.description },
+    { itemProp: "image", content: image },
     { name: "description", content: description || site.description },
 
     { name: "twitter:card", content: "summary_large_image" },
-    { name: "twitter:title", content: title || site.title },
+    { name: "twitter:title", content: title },
     { name: "twitter:description", content: description || site.description },
     { name: "twitter:image", content: image },
 
-    { property: "og:title", content: title || site.title },
+    { property: "og:title", content: title },
     { property: "og:url", content: url },
     { property: "og:image", content: image },
     { property: "og:description", content: description || site.description },
@@ -58,9 +60,34 @@ const HeadMeta = ({
     <Head>
       <title>{title || site.title}</title>
       <link rel="canonical" href={canonicalUrl || url} />
+
       {metaTags.map((tag, index) => (
         <meta key={index} {...tag} />
       ))}
+
+      {/* Favicon */}
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+      />
+      <link rel="manifest" href="/site.webmanifest" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2b6cb0" />
+      <meta name="msapplication-TileColor" content="#2b6cb0" />
+      <meta name="theme-color" content="#dae1e7" />
+
       {children}
     </Head>
   );

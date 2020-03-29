@@ -1,58 +1,73 @@
-import fs from "fs";
-import path from "path";
 import React from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
-import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import HeadMeta from "../../components/HeadMeta";
 import Hero from "../../components/work/Hero";
 import renderers from "../../components/markdown/renderers";
+import {
+  getFileNames,
+  getNextWork,
+  getWorkData,
+  WorkData,
+} from "../../utils/work";
+import WorkCard from "../../components/WorkCard";
+import Container from "../../components/layout/Container";
+import BaseLayout from "../../components/layout/BaseLayout";
 
-interface MarkdownDocument {
-  data: { [key: string]: any };
-  content: string;
-}
-
-interface WorkProps extends MarkdownDocument {
+interface WorkProps extends WorkData {
   path: string;
-  next?: MarkdownDocument[];
+  next?: WorkData[];
 }
 
 const Work = (props: WorkProps): JSX.Element => {
-  const { title, date } = props.data;
+  const { title } = props.data;
 
   return (
-    <div>
+    <BaseLayout>
       <HeadMeta path={props.path} title={title} />
 
-      <Hero title={title} date={date} />
+      <Hero work={props} />
 
       <div className="my-10">
         <ReactMarkdown
           className="markdown"
           source={props.content}
           renderers={renderers}
+          escapeHtml={false}
         />
       </div>
 
-      {props.next && props.next.length > 0 && <div>NEXT</div>}
-    </div>
+      {props.next && props.next.length === 2 && (
+        <Container size="lg">
+          <div className="flex items-center mt-32 mb-20">
+            <div className="flex-grow border-t" />
+            <div className="text-gray-500 font-bold tracking-wide mx-4">More</div>
+            <div className="flex-grow border-t" />
+          </div>
+
+          <div className="flex">
+            <WorkCard className="flex-1 mr-2" work={props.next[0]} />
+            <WorkCard className="flex-1 ml-2" work={props.next[1]} />
+          </div>
+        </Container>
+      )}
+    </BaseLayout>
   );
 };
 
 // This function gets called at build time
 export const getStaticProps: GetStaticProps<WorkProps> = async (context) => {
-  const { slug } = context.params;
+  let { slug } = context.params;
+  slug = Array.isArray(slug) ? slug[0] : slug;
 
   // Import our .md file using the `slug` from the URL
-  const file = await import(`../../content/work/${slug}.md`);
-  const data = matter(file.default);
+  const work = await getWorkData(slug);
 
   return {
     props: {
+      ...work,
       path: `/work/${slug}`,
-      data: data.data,
-      content: data.content,
+      next: await getNextWork(slug),
     },
   };
 };
@@ -60,11 +75,8 @@ export const getStaticProps: GetStaticProps<WorkProps> = async (context) => {
 // This function gets called at build time
 // eslint-disable-next-line @typescript-eslint/require-await
 export const getStaticPaths: GetStaticPaths = async () => {
-  const workDirectory = path.join(process.cwd(), "content/work");
-  const files = fs.readdirSync(workDirectory);
-
   // Get the paths we want to pre-render based on the file names
-  const paths = files.map((fileName) => ({
+  const paths = getFileNames().map((fileName) => ({
     params: { slug: fileName.split(".")[0] },
   }));
 

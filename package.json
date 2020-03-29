@@ -12,14 +12,17 @@
   "dependencies": {
     "date-fns": "^2.11.1",
     "gray-matter": "^4.0.2",
+    "lodash": "^4.17.15",
     "next": "9.3.1",
     "raw-loader": "^4.0.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-icons": "^3.9.0",
     "react-markdown": "^4.3.1"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@types/lodash": "^4.14.149",
     "@types/node": "^12.12.31",
     "@types/react": "^16.9.25",
     "@typescript-eslint/eslint-plugin": "^2.25.0",

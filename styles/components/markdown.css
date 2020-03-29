@@ -1,7 +1,10 @@
 /* purgecss start ignore */
 
-.markdown-container-narrow {
+.markdown-container-sm {
   @apply max-w-screen-sm mx-auto px-4;
+}
+.markdown-container-md {
+  @apply max-w-screen-md mx-auto px-4;
 }
 
 .markdown > *:first-child {
@@ -21,15 +24,19 @@
   @apply border-t-0 border-r-0 border-l-0 border-b-2 border-gray-200 my-16;
 }
 
-.markdown > a, > p a, > ul li a, > ol li a {
-  @apply text-blue-500 underline font-medium;
+.markdown > a,
+.markdown > p a,
+.markdown> ul li a,
+.markdown> ol li a {
+  @apply text-blue-700 underline font-medium;
 }
 
 .markdown strong {
   @apply text-blue-500;
 }
 
-.markdown > p strong, > ul strong {
+.markdown > p strong,
+.markdown> ul strong {
   @apply font-semibold font-semibold;
   @apply text-gray-800;
 }
@@ -40,11 +47,11 @@
 .markdown > h4 {
   @apply font-serif font-semibold;
   @apply text-black;
-  @apply markdown-container-narrow;
+  @apply markdown-container-sm;
 }
 
 .markdown > h1 {
-  @apply mb-1;
+  @apply mt-10 mb-1;
   @apply leading-none;
   @apply text-4xl;
 }
@@ -80,9 +87,33 @@
   @apply mt-6;
 }
 
+.markdown-image-sm {
+  @apply markdown-container-sm;
+}
+
+.markdown-image-md {
+  @apply markdown-container-md;
+}
+
+.markdown > p > img,
+.markdown-image-sm > img,
+.markdown-image-md > img,
+.markdown-video > video {
+  @apply my-20 shadow-2xl rounded overflow-hidden;
+}
+
+.markdown-video-16\/9 {
+  @apply relative my-20;
+  padding-bottom: 56.25%;
+}
+
+.markdown-video-16\/9 > iframe {
+  @apply absolute w-full h-full rounded shadow-2xl;
+}
+
 .markdown > ul,
 .markdown > ol {
-  @apply markdown-container-narrow;
+  @apply markdown-container-sm;
 }
 
 .markdown > ul:not(.list-none) {

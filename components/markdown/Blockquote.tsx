@@ -11,13 +11,16 @@ const Blockquote = (props: BlockquoteProps): JSX.Element => {
     props.children[0].props &&
     props.children[0].props.children &&
     props.children[0].props.children[0].props.children ? (
-      <p>{props.children[0].props.children[0].props.children}</p>
+      <>
+        <p>{props.children[0].props.children[0].props.children}</p>
+        {/*<p>{props.children[0].props.children[1].props.children}</p>*/}
+      </>
     ) : (
       props.children
     );
 
   return (
-    <blockquote className="font-serif font-medium italic text-2xl leading-tight border-l-4 pl-4 max-w-screen-md">
+    <blockquote className="my-16 font-serif font-medium italic text-2xl leading-snug border-l-4 pl-4 max-w-screen-md mx-auto">
       {children}
     </blockquote>
   );

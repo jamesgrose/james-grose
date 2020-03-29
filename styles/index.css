@@ -6,6 +6,10 @@
 @import 'tailwindcss/base';
 /* purgecss end ignore */
 
+/**
+ * Custom components.
+ */
+@import "./components/link.css";
 @import "./components/markdown.css";
 
 /**
