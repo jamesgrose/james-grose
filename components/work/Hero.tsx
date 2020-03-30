@@ -19,6 +19,7 @@ import {
   FaAndroid,
   FaApple,
   FaShoppingCart,
+  FaCloud,
 } from "react-icons/fa";
 import PageTitle from "../PageTitle";
 
@@ -36,6 +37,7 @@ const iconComponents = {
   linux: FaLinux,
   "digital ocean": FaDigitalOcean,
   aws: FaAws,
+  "google cloud": FaCloud,
   android: FaAndroid,
   apple: FaApple,
   cart: FaShoppingCart,
@@ -60,10 +62,11 @@ const Hero = ({ work }: HeroProps): JSX.Element => {
   return (
     <div>
       <Container size="sm">
-        <header>
+        <header className="text-center">
           <PageTitle>{work.data.title}</PageTitle>
+
           <div className="text-gray-600 text-sm py-4">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <Date date={work.data.date} />
               {work.data.role && (
                 <>
@@ -80,20 +83,45 @@ const Hero = ({ work }: HeroProps): JSX.Element => {
             </div>
 
             {icons && (
-              <div className="md:hidden pt-2">
-                <div className="flex text-lg">{icons}</div>
+              <div className="md:hidden pt-1">
+                <div className="flex justify-center text-lg">{icons}</div>
               </div>
             )}
           </div>
         </header>
       </Container>
 
-      <Container size="lg" className="py-20 text-center">
+      <Container size="lg" className="flex items-center flex-wrap py-20">
         <img
-          className="inline-block shadow-2xl rounded"
+          className="md:w-2/3 shadow-2xl rounded"
           src={work.data.image}
           alt={work.data.title}
         />
+
+        <div className="md:w-1/3 pt-4 md:pt-0 md:pl-4 z-10">
+          {work.data.client && (
+            <>
+              <div className="text-gray-600 font-semibold mb-1">Client</div>
+              <p className="mb-4">{work.data.client}</p>
+            </>
+          )}
+
+          {work.data.role && (
+            <>
+              <div className="text-gray-600 font-semibold mb-1">Role</div>
+              <p className="mb-4">{work.data.role}</p>
+            </>
+          )}
+
+          {work.data.technology && (
+            <>
+              <div className="text-gray-600 font-semibold mb-1">
+                Technologies
+              </div>
+              <p className="mb-4">{work.data.technology}</p>
+            </>
+          )}
+        </div>
       </Container>
     </div>
   );

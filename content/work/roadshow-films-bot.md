@@ -3,20 +3,27 @@ title: "BotBuster"
 date: "2017-10-01"
 client: "Roadshow Films"
 image: "/images/work/roadshow-films-bot/hero.jpg"
-description: "A chat bot that lets people and groups book movies via Facebook messenger"
+description: "Book movies as a group via Facebook messenger"
 icons: ["facebook messenger", "laravel", "aws"]
 role: "Solutions Architect, Developer"
+technology: "Laravel, Redis, MySQL, Amazon Web Services"
 ---
 
-I created BotBuster during my time at [B.B.E](https://bbe.io), when
-[Roadshow Films](https://roadshow.com.au) proposed the use of Facebook Messenger
-as a strategic opportunity in the face of a changing relationship between
-consumers, cinema retailers and online video services.
+# My role
 
-# The solution
+Over the course of the BotBuster project, I was responsible for the complete
+development pipeline and infrastructure of the solution. I leveraged the chat
+framework I [developed for Qantas](/work/qantas-bot), and deployed it with the
+same battle test hosting configuration.
 
-The solution was the production of a customer experience for Roadshow that lets
-people and groups book movies via Facebook Messenger.
+I was involved directly with stakeholders at all stages of the project, from the
+initial proposal to backlog development and presentations.
+
+# The project
+
+The project came about when [Roadshow Films](https://roadshow.com.au) proposed
+the use of Facebook Messenger as a strategic opportunity. We responded with an
+idea for a bot that lets people and groups book movies - all within Messenger.
 
 Buster is able to handle millions of interactions simultaneously, with the
 ability to find any movie session at any cinema in Australia. People can invite
@@ -26,10 +33,6 @@ conversation between them to arrive at a session everyone can attend.
 <div class="markdown-video-16/9">
 <iframe src="https://player.vimeo.com/video/242667129" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" frameborder="0"></iframe>
 </div>
-
-In building BotBuster I leveraged the chat framework I
-[developed for Qantas](/work/qantas-bot), and was responsible for the
-end-to-end development, pipeline, and infrastructure of the solution.
 
 # The results
 

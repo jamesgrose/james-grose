@@ -8,9 +8,10 @@ export interface WorkData {
     date: string;
     description: string;
     image: string;
-    client?: string;
     icons?: string[];
+    client?: string;
     role?: string;
+    technology?: string;
   };
   slug: string;
   content: string;

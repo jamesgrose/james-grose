@@ -27,11 +27,17 @@ const WorkCard = (props: WorkCardProps): JSX.Element => {
             {work.data.title}
           </h2>
 
-          <p className="my-1 text-gray-900">
-            {work.data.description || ""}
-          </p>
+          <p className="my-1 text-gray-900">{work.data.description || ""}</p>
 
-          <Date className="absolute bottom-0" date={work.data.date} />
+          <div className="flex absolute bottom-0 text-gray-600 font-semibold">
+            <Date date={work.data.date} />
+            {work.data.client && (
+              <>
+                <div className="px-2">·</div>
+                <div>{work.data.client}</div>
+              </>
+            )}
+          </div>
         </div>
       </a>
     </Link>

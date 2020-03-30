@@ -3,33 +3,42 @@ title: "Live Better"
 date: "2018-06-01"
 client: "Medibank"
 image: "/images/work/live-better/hero.png"
-description: "Medibank's three content marketing sites - streamlined into one efficient brand"
-icons: ["vue", "react", "laravel", "salesforce", "docker", "aws"]
+description: "5 years of content marketing with Medibank"
+icons: ["vue", "react", "laravel", "salesforce", "docker", "google cloud"]
 role: "Tech Lead, Solutions Architect, Developer"
+technology: "VueJS, React, Laravel, Redis, MySQL, HubSpot, Salesforce, Docker, Kubernetes, Helm, Terraform, Google Cloud"
 ---
 
-In 2020 and beyond, [Live Better](https://www.medibank.com.au/livebetter/) is
-[Medibank's](https://www.medibank.com.au/) primary go-to-market proposition.
-It's a project I've been working on at [B.B.E](https://bbe.io) since its humble
-beginnings, and is now the unifying platform from which communications stems.
+# My role
 
 Over the course of this project I have been responsible for all hosting and
 backend systems. I built the initial frontend - then lead it's continued
-development.
+development as it evolved.
 
-# Health Brief
+What initially started as a simple project on VPS hosting, grew to a complex
+architecture deployed to a Kubernetes cluster that I managed and provisioned
+with Terraform. As well as a backend I integrated with internal Medibank
+systems.
+
+# The project
+
+In 2020 and beyond, [Live Better](https://www.medibank.com.au/livebetter/) is
+[Medibank's](https://www.medibank.com.au/) primary go-to-market proposition.
+It's a project I've been working on at [B.B.E](https://bbe.io) since its
+beginnings, and is now the unifying platform from which communications stems.
+
+## Project 1 - Health Brief
 
 The road to Live Better starts with creation of a new content marketing site;
-Medibank Health Brief. In partnership with Roy Morgan, Health Brief became an
-expansive and trusted resource to support Australians in preventative and
-restorative health.
+Medibank Health Brief. Created in React, the site pulled content from WordPress
+over the API to deliver a dynamic and responsive experience to all user.
 
-Created in React, the site pulled content from WordPress over the API to deliver
-a dynamic and responsive experience to all user.
+Health Brief became an expansive and trusted resource to support Australians in
+preventative and restorative health.
 
 ![alt text](/images/work/live-better/poster-1.png)
 
-# School of Better
+## Project 2 - School of Better
 
 In the same year as Health Brief, we also launched School of Better, a custom
 built learning management system which provided people with in depth learning
@@ -37,17 +46,15 @@ experiences on psychology, nutrition and physical health.
 
 ![alt text](/images/work/live-better/poster-2.png)
 
-# Live Better
-
-In 2019 Live Better was launched, which combined Medibank's 3 disparate
-marketing platforms into one. With everything now connected through Salesforce
-and other technologies, it quickly became the backbone of marketing automation
-for Medibank.
+## Project 3 - Live Better
 
 Continuing the headless API driven approach from Health Brief, Live Better was
 built with VueJS in the frontend, Contentful powering the content management
 system, and Laravel providing backend microservices and utilities.
 
+Live Better combined Medibank's 3 disparate marketing platforms into one.
+With everything now connected through Salesforce and other technologies, it
+quickly became the backbone of marketing automation for Medibank.
 
 ![alt text](/images/work/live-better/poster-3.png)
 
@@ -82,7 +89,7 @@ the Live Better app.
 We worked alongside this team to utilise the headless approach we developed, and
 deliver content straight from the Live Better site into the Live Better App.
 
-# Press
+## Press
 
 - https://healthdispatch.com.au/news/medibank-employees-to-trial-new-live-better-app
 - https://campaignbrief.com/medibank-asks-punters-is-healt/

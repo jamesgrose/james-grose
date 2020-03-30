@@ -8,7 +8,9 @@ const Header = (): JSX.Element => {
       <div className="flex py-5 mb-20 border-b text-gray-700 leading-snug">
         <div className="flex-1">
           <Link href="/">
-            <a className="text-link font-serif font-bold">James Grose</a>
+            <a className="text-link font-serif font-bold" title="Home">
+              James Grose
+            </a>
           </Link>
         </div>
 
@@ -16,6 +18,7 @@ const Header = (): JSX.Element => {
           <a
             className="text-link"
             href="mailto:hello@jamesgro.se?subject=A+new+opportunity"
+            title="Email"
           >
             hello@jamesgro.se
           </a>

@@ -1,17 +1,33 @@
 ---
 title: "Fliteboard"
 date: "2019-06-01"
+client: "Fliteboard"
 image: "/images/work/fliteboard/hero.jpg"
 description: "A custom ecommerce solution across 13 regions"
-icons: ["vue", "laravel", "stripe", "aws"]
-role: "Team Lead, Solutions Architect, Backend Developer"
+icons: ["vue", "laravel", "aws"]
+role: "Tech Lead, Solutions Architect, Backend Developer"
+technology: "VueJS, NuxtJS, Laravel, Redis, MySQL, Mailgun, Stripe, PayPal, POLi, Terraform, Amazon Web Services"
 ---
 
-[Fliteboard](https://fliteboard.com) had recently received a large round of
-funding led by Australia's biggest investors, and with millions in presales had
-no framework to build and deliver products at scale. The [B.B.E](https://bbe.io)
-team was engaged to develop and implement a launch strategy ensuring pre-sales
-fulfilment and market launch in 90 days.
+# My role
+
+My primary role on Fliteboard was as the Solutions Architect.
+After multiple client workshops it became clear that we had to develop a custom
+solution to deliver on the unique requirements that Fliteboard, and designing
+that system was my responsibility.
+
+I lead the project from a technical perspective, and developed the
+infrastructure, pipeline, and backend with multiple payment gateways and a
+fully unit tested API. The solution was then deployed in the form of a
+statically compiled frontend, and an autoscaling backend deployed to AWS.
+
+# The project
+
+Early in 2019, [Fliteboard](https://fliteboard.com) received a large round of
+funding, and with millions in presales, there was not yet a framework to build
+and deliver products at scale. My team at [B.B.E](https://bbe.io) was engaged to
+develop an ecommerce solution that would fulfill on pre-sales, for a market
+launch in 90 days.
 
 From brief to market launch, the site was completely rebuilt and launched with
 global shipping and online sales in 13 regions.
@@ -38,10 +54,8 @@ product by the customer.
 This reduction in inventory management overheard contributed to successfully
 forecasting sales and reducing lead time on orders from 3 months to 6 weeks.
 
-The solution was deployed in the form of a statically compiled frontend, and an
-autoscaling backend deployed to a lambda within AWS.
+# The results
 
-# The result
 - Rolled out to 13 regions
 - On track to realise $17m in year 1 sales
 - 175% increased revenue

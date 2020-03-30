@@ -15,6 +15,7 @@ const Footer = (): JSX.Element => {
             <a
               className="text-link"
               href="mailto:hello@jamesgro.se?subject=A+new+opportunity"
+              title="Email"
             >
               hello@jamesgro.se
             </a>
@@ -26,6 +27,7 @@ const Footer = (): JSX.Element => {
             href="https://keybase.io/jamesgrose"
             target="_blank"
             rel="noopener noreferrer"
+            title="Keybase"
           >
             <FaKeybase />
           </a>
@@ -34,6 +36,7 @@ const Footer = (): JSX.Element => {
             href="https://github.com/jamesgrose"
             target="_blank"
             rel="noopener noreferrer"
+            title="Github"
           >
             <FaGithub />
           </a>
@@ -42,6 +45,7 @@ const Footer = (): JSX.Element => {
             href="https://www.linkedin.com/in/jamesgrose"
             target="_blank"
             rel="noopener noreferrer"
+            title="LinkedIn"
           >
             <FaLinkedin />
           </a>
@@ -50,6 +54,7 @@ const Footer = (): JSX.Element => {
             href="https://github.com/jamesgrose/james-grose"
             target="_blank"
             rel="noopener noreferrer"
+            title="Website Source"
           >
             <FaCode />
           </a>

@@ -3,18 +3,27 @@ title: "Display Studio"
 date: "2017-05-01"
 client: "B.B.E"
 image: "/images/work/display-studio/hero.png"
-description: "SaaS that operates on platform, handling tens of millions of events to optimise and deliver content"
-icons: ["js", "vue", "laravel", "stripe", "digital ocean"]
+description: "Handling tens of millions of events to deliver optimised content"
+icons: ["js", "vue", "laravel", "digital ocean"]
 role: "Tech Lead, Developer"
+technology: "VueJS, Laravel, Redis, Postgres, Digital Ocean"
 ---
 
-Display Studio was developed from my work with [Medibank](https://www.medibank.com.au)
-during my time at [B.B.E](https://bbe.io). We needed a simple and lightweight
-way to connect the audience to personalised and effective content on platform.
+# My role
 
-# The solution
+Initially as the sole developer, and later as the Tech Lead - I built Display
+Studio and lead it's development as we scaled it to a fully featured SaaS.
 
-Display Studio was created as its own standalone SaaS platform.
+The project was built with Laravel as the backend, and had a custom tracking
+script that injected display banners into sites and monitored usage. As demand
+for the project grew, I optimised the hosting configuration and migrated to a
+new database that could deal with the large demand.
+
+# The project
+
+Display Studio was born from my work with Medibank on other projects - we needed
+a simple and lightweight way to connect the audience to personalised and
+effective content on platform.
 
 By monitoring how the user navigates the website, and hooking into data sources
 such as Salesforce or Hubspot, Display Studio is able to auto-optimise and
@@ -26,11 +35,7 @@ This provided a cost effective way to serve up content and ads in real
 time that are a reflection of our customers behaviour, nudging audiences towards
 the next best action.
 
-My role on the project was initially as the sole developer, and later as the
-Tech Lead as the solution scaled to require more robust infrastructure and a
-revamp of the management portal.
-
-# The result
+# The results
 
 - Utilised by 4 clients
 - +70 million tracked data points
