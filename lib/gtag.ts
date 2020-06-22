@@ -16,10 +16,22 @@ export const pageview = (url): void => {
 };
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
-export const event = ({ action, category, label, value }): void => {
-  window.gtag("event", action, {
+export const event = ({
+  action,
+  category,
+  label,
+  value,
+  nonInteraction,
+}): void => {
+  const data: { [key: string]: any } = {
     event_category: category,
     event_label: label,
     value: value,
-  });
+  };
+
+  if (nonInteraction) {
+    data.non_interaction = true;
+  }
+
+  window.gtag("event", action, data);
 };

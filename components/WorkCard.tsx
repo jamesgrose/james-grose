@@ -22,14 +22,14 @@ const WorkCard = (props: WorkCardProps): JSX.Element => {
           />
         </div>
 
-        <div className="flex-grow relative pb-6 z-10">
+        <div className="flex-grow relative z-10">
           <h2 className="font-serif font-semibold text-xl">
             {work.data.title}
           </h2>
 
           <p className="my-1 text-gray-900">{work.data.description || ""}</p>
 
-          <div className="flex absolute bottom-0 text-gray-600 font-semibold">
+          <div className="flex bottom-0 text-gray-600 font-semibold">
             <Date date={work.data.date} />
             {work.data.client && (
               <>
